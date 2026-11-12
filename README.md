@@ -1,16 +1,36 @@
-# React + Vite
+# 📰 Dashboard de Noticias Personalizadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web de consumo de noticias en tiempo real, diseñada con un enfoque prioritario en la experiencia de usuario (UX/UI), el rendimiento y la persistencia de datos. Este proyecto integra un diseño moderno en "Dark Mode" maquetado previamente en Figma, trasladado a código mediante React.
 
-Currently, two official plugins are available:
+🌐 **Despliegue en vivo:** [https://noticias-app-marco.vercel.app/](https://noticias-app-marco.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Características Principales
 
-## React Compiler
+*   **Consumo de API REST:** Integración con NewsAPI para obtener titulares actualizados al instante.
+*   **Enrutamiento Dinámico:** Navegación fluida sin recargas de página utilizando `react-router-dom`, separando el feed principal de las vistas de categorías.
+*   **Filtro por Categorías:** Clasificación de noticias (General, Deportes, Tecnología, Negocios y Entretenimiento) a través de peticiones parametrizadas.
+*   **Buscador Integrado:** Filtrado de artículos mediante palabras clave capturadas desde la barra de búsqueda.
+*   **Persistencia de Datos (LocalStorage):** Sistema de "Favoritos" que permite al usuario guardar y eliminar noticias, manteniendo la información intacta incluso tras recargar el navegador.
+*   **Diseño Responsive y Dark Mode:** Interfaz moderna y adaptable a dispositivos móviles, basada en un diseño UI/UX propio creado en Figma.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack Tecnológico
 
-## Expanding the ESLint configuration
+*   **Core:** React, Vite (Entorno de desarrollo rápido).
+*   **Routing:** React Router v6.
+*   **Peticiones HTTP:** Axios.
+*   **Estilos:** CSS3 nativo (CSS Modules / Flexbox & CSS Grid para la estructura de tarjetas).
+*   **Control de Versiones y Despliegue:** Git, GitHub y Vercel.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚠️ Nota Técnica sobre el Despliegue (Importante)
+
+La aplicación está desplegada y accesible en Vercel. Sin embargo, este proyecto utiliza el plan "Developer" (gratuito) de NewsAPI. Por políticas estrictas de seguridad (CORS) de la propia plataforma, **NewsAPI bloquea las peticiones realizadas desde dominios públicos en producción**.
+
+Para evaluar correctamente toda la lógica de peticiones, el filtrado y el guardado de favoritos con datos reales, es necesario levantar el proyecto en un entorno local.
+
+## 💻 Instalación y Uso en Local
+
+Si deseas probar la aplicación sin las restricciones de la API en producción, sigue estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/maarcoslunna/noticias-app.git](https://github.com/maarcoslunna/noticias-app.git)
